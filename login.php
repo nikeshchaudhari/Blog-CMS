@@ -42,10 +42,15 @@ $errors = [];
 
                 $result = mysqli_fetch_assoc($data);
                      
-                if($result && $password_verify($password,$result["password"])){
+                if($result && password_verify($password,$result["password"])){
                     $_SESSION['user']= $username;
-                    $_SESSION['password']= $password;
+
+                    header('Location:dashboard.php');
+                    exit;
+                }else{
+                    $errors[] = 'username and pasword incorrect';
                 }
+            }
             ?>
         </div>
     </main>
