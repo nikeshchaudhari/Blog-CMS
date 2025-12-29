@@ -1,5 +1,6 @@
 <?php
 include("config.php");
+$errors = [];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,6 +28,13 @@ include("config.php");
              if(isset($_POST["login-btn"])){
                 $username = $_POST["username"];
                 $password = $_POST["password"];
+
+                if($username == ""){
+                    $errors[] = "username is required";
+                }
+                if(strlen($password) < 6){
+                    $errors[] = "password must be 6 characters";
+                }
 
                 $query = "INSERT INTO users(username,password)VALUES('$username','$password')";
                 $data = mysqli_query($conn, $query);    
