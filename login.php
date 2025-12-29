@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <main class="w-full h-screen flex justify-center bg-gray-100/20  ">
+    <main class="w-full h-screen flex justify-center bg-gray-200/100  ">
         <div class="w-[400px] h-[280px] m-auto bg-white/20  shadow-xl p-2 rounded">
             <h2 class="text-center text-[25px] font-bold">Login</h2>
             <form method="post" class="flex flex-col m-2">
