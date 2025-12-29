@@ -1,7 +1,6 @@
 <?php
 session_start();
 include("config.php");
-$errors = [];
 ?>
 <!DOCTYPE html>
 <html lang="en">    
@@ -21,6 +20,7 @@ $errors = [];
             <form method="post" class="flex flex-col m-2">
                 <label for="username" class="mb-2">Username</label>
                 <input type="text" id="username" name="username" placeholder="Enter username" class="border p-2 rounded mb-2 ">
+                
                 <label for="pass" class="mb-2">Password</label>
                 <input type="password" id="pass" name="password" placeholder="Enter password" class="border p-2 rounded mb-4">
                 <button type="submit" name="login-btn" class="bg-gray-800 p-2 text-white rounded-lg hover:bg-gray-700 cursor-pointer">Login</button>
@@ -30,30 +30,24 @@ $errors = [];
                 $username=trim($_POST["username"]);
                 $password=trim($_POST["password"]);
 
-                if($username===""){
-                    $errors[] = "username is required";
-                }
-                if($password=== ""){
-                    $errors[] = "password required";
-                }
+                
 
-                $query = "SELECT * FROM users WHERE username ='$username'AND password ='$password'";
+                $query = "SELECT * FROM users WHERE username ='$username'";
                 $data = mysqli_query($conn, $query);    
 
                 $result = mysqli_fetch_assoc($data);
                      
-                if($result && password_verify($password,$result["password"])){
-                    $_SESSION['user']= $username;
+                if($result && password_verify($password,$result['password'])){
+                    $_SESSION['user']=$username;
 
                     header('Location:dashboard.php');
-                    exit;
+                    exit();
                 }else{
-                    $errors[] = 'username and pasword incorrect';
-                }
-            }
+                    echo " username and password inscorrect";
+                };
+        }
             ?>
         </div>
     </main>
 </body>
-
 </html>
