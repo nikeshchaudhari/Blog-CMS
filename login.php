@@ -1,9 +1,10 @@
 <?php
+session_start();
 include("config.php");
 $errors = [];
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">    
 
 <head>
     <meta charset="UTF-8">
@@ -25,26 +26,26 @@ $errors = [];
                 <button type="submit" name="login-btn" class="bg-gray-800 p-2 text-white rounded-lg hover:bg-gray-700 cursor-pointer">Login</button>
             </form>
             <?php 
-             if(isset($_POST["login-btn"])){
-                $username = $_POST["username"];
-                $password = $_POST["password"];
+            if(isset($_POST["login-btn"])){
+                $username=trim($_POST["username"]);
+                $password=trim($_POST["password"]);
 
-                if($username == ""){
+                if($username===""){
                     $errors[] = "username is required";
                 }
-                if(strlen($password) < 6){
-                    $errors[] = "password must be 6 characters";
+                if($password=== ""){
+                    $errors[] = "password required";
                 }
 
-                $query = "INSERT INTO users(username,password)VALUES('$username','$password')";
+                $query = "SELECT * FROM users WHERE username ='$username'AND password ='$password'";
                 $data = mysqli_query($conn, $query);    
-                if($data){
-                    echo "Data insert ";
-                }else{
-                    echo "Data Not Insert";
+
+                $result = mysqli_fetch_assoc($data);
+                     
+                if($result && $password_verify($password,$result["password"])){
+                    $_SESSION['user']= $username;
+                    $_SESSION['password']= $password;
                 }
-             }
-            
             ?>
         </div>
     </main>
