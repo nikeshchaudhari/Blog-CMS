@@ -1,4 +1,6 @@
-<?php ?>
+<?php
+include("config.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +13,7 @@
 </head>
 
 <body>
-    <main class="w-full h-screen flex justify-center bg-gray-200/100  ">
+    <main class="w-full h-screen flex justify-center bg-gray-200/100">
         <div class="w-[400px] h-[280px] m-auto bg-white/20  shadow-xl p-2 rounded">
             <h2 class="text-center text-[25px] font-bold">Login</h2>
             <form method="post" class="flex flex-col m-2">
@@ -21,6 +23,21 @@
                 <input type="password" id="pass" name="password" placeholder="Enter password" class="border p-2 rounded mb-4">
                 <button type="submit" name="login-btn" class="bg-gray-800 p-2 text-white rounded-lg hover:bg-gray-700 cursor-pointer">Login</button>
             </form>
+            <?php 
+             if(isset($_POST["login-btn"])){
+                $username = $_POST["username"];
+                $password = $_POST["password"];
+
+                $query = "INSERT INTO users(username,password)VALUES('$username','$password')";
+                $data = mysqli_query($conn, $query);    
+                if($data){
+                    echo "Data insert ";
+                }else{
+                    echo "Data Not Insert";
+                }
+             }
+            
+            ?>
         </div>
     </main>
 </body>
