@@ -19,13 +19,13 @@ session_start();
 
 <body>
    <!-- sidebar -->
-    <div class="sidebar">
+    <div class="sidebar w-[250px] bg-green-700 h-screen">
         <h2>Admin</h2>
         <a href="dashboard.php">Dashboard</a>
         <a href="#">Posts</a>
         <a href="#">Users</a>
         <a href="#">Setting</a>
-        <a href="#">Logout</a>
+        <a href="logout.php">Logout</a>
     </div>
 </body>
 
