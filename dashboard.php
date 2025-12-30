@@ -22,13 +22,13 @@ if(!isset($_SESSION['user'])){
 
 <body>
    <!-- sidebar -->
-    <div class="sidebar shadow-lg w-[250px]  h-screen flex flex-col m-2">
-        <h2 class="text-[20px] text-center font-bold mb-2 ">Welcome <?php echo $_SESSION['user'] ?></h2>
-        <a href="dashboard.php" class="  bg-red-500 p-2">Dashboard</a>
-        <a href="#">Posts</a>
-        <a href="#">Users</a>
-        <a href="#">Setting</a>
-        <a href="logout.php">Logout</a>
+    <div class="sidebar shadow-lg w-[250px]  h-screen flex flex-col bg-green-100/10 ">
+        <h2 class="text-[20px] text-center font-bold mt-3 mb-2 ">Welcome <?php echo $_SESSION['user'] ?></h2>
+        <a href="dashboard.php"- class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Dashboard</a>
+        <a href="#" class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Posts</a>
+        <a href="#" class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Users</a>
+         <a href="#" class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Setting</a>
+        <a href="logout.php" class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Logout</a>
     </div>
 <div class="main">
 
