@@ -21,8 +21,9 @@ if(!isset($_SESSION['user'])){
 </head>
 
 <body>
+    <div class="flex">
    <!-- sidebar -->
-    <div class="sidebar shadow-lg w-[250px]  h-screen flex flex-col bg-green-100/10 ">
+    <div class="sidebar shadow-lg w-[250px] flex-shrink-0  h-screen flex flex-col bg-green-100/10 ">
         <h2 class="text-[20px] text-center font-bold mt-3 mb-2 ">Welcome <?php echo $_SESSION['user'] ?></h2>
         <a href="dashboard.php"- class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Dashboard</a>
         <a href="#" class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Posts</a>
@@ -30,8 +31,11 @@ if(!isset($_SESSION['user'])){
          <a href="#" class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Setting</a>
         <a href="logout.php" class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Logout</a>
     </div>
-<div class="main">
-
+<div class="main w-full bg-gray-200">
+<div class="shadow-lg p-5">
+    <h2 class="text-[30px] ml-5 font-bold">Dashboard</h2>
+</div>
+</div>
 </div>
 </body>
 
