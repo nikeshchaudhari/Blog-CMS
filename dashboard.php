@@ -33,7 +33,23 @@ if(!isset($_SESSION['user'])){
     </div>
 <div class="main w-full bg-gray-200">
 <div class="shadow-lg p-5">
-    <h2 class="text-[30px] ml-5 font-bold">Dashboard</h2>
+    <h2 class="text-[30px] ml-5 font-bold">Dashboard</h2> 
+</div>
+<div class="flex ">
+    <div class="w-[200px] h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:transform-transformY-3">
+        <h1 class="text-center text-[25px] font-bold">Admin</h1>
+        
+    </div>
+     <div class="w-[200px] h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg">
+        <h1 class="text-center text-[25px] font-bold">Users</h1>
+    </div>
+    <div class="w-[200px] h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg">
+        <h1 class="text-center text-[25px] font-bold"   >Total Posts</h1>
+    </div>
+   
+    <div class="w-[200px] h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg">
+        <h1 class="text-center text-[25px] font-bold">Total Comments</h1>
+    </div>
 </div>
 </div>
 </div>
