@@ -44,21 +44,25 @@ if(!isset($_SESSION['user'])){
 <div class="shadow-lg md:shadow p-3 md:p-5">
     <h2 class="text-[20px] md:text-[30px] ml-5 font-bold">Dashboard</h2> 
 </div>
-<div class="flex ">
-    <div class="w-[200px] md:w-[500px] lg:w-[250px] h-[90px] md:h-[100px] lg:h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer ">
+<div class="container mx-auto p-4   ">
+
+
+<div class="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 ">
+    <div class="h-[100px] md:h-[120px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer ">
         <h1 class="text-center text-[20px] lg:text-[25px]  font-bold">Admin</h1>
         
     </div>
-     <div class="w-[200px] md:w-[500px] lg:w-[250px] h-[90px] md:h-[150px] lg:h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer">
-        <h1 class="text-center text-[25px] font-bold">Users</h1>
+     <div class="h-[100px] md:h-[120px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer">
+        <h1 class="text-center text-[20px] lg:text-[25px]  font-bold">Users</h1>
     </div>
-    <div class="w-[200px] md:w-[300px] lg:w-[250px] h-[90px] md:h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer">
-        <h1 class="text-center text-[25px] font-bold"   >Total Posts</h1>
+    <div class="h-[100px] md:h-[120px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer">
+        <h1 class="text-center text-[20px] lg:text-[25px]  font-bold"   >Total Posts</h1>
     </div>
    
-    <div class="w-[200px] md:w-[300px] lg:w-[250px] h-[90px] md:h-[150px]  bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer">
-        <h1 class="text-center text-[25px] font-bold">Total Comments</h1>
+    <div class="h-[100px] md:h-[120px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer">
+        <h1 class="text-center text-[20px] lg:text-[25px]  font-bold">Total Comments</h1>
     </div>
+</div>
 </div>
 </div>
 </div>
