@@ -40,10 +40,25 @@ if(!isset($_SESSION['user'])){
          <a href="#" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Setting</a>
         <a href="logout.php" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Logout</a>
     </div>
-<div class="main flex-1 w-full min-h-screen bg-gray-200 overflow-hidden">
-<div class="shadow-lg md:shadow p-3 md:p-5">
-    <h2 class="text-[20px] md:text-[30px] ml-5 font-bold">Dashboard</h2> 
+<!-- mobile slider -->
+<div class="mobile-slider z-20 fixed bg-white w-64 h-full top-0 ">
+<h2 class="p-3 shadow-lg font-bold text-center">Welcome <?php echo $_SESSION['user']?></h2>
+<div class="flex flex-col  ">
+    <a href="dashboard.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700  active:text-white  ">Dashboard</a>
+<a href="dashboard.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700 active:text-white  ">Posts</a>
+<a href="dashboard.php" class="px-10 py-2  transform transition duration-300  active:bg-gray-700  active:text-white   ">Users</a>
+<a href="dashboard.php" class="px-10 py-2  transform transition duration-300  active:bg-gray-700  active:text-white   ">Settings</a>
+<a href="dashboard.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700  active:text-white  ">Logout</a>
 </div>
+</div>
+    
+<div class="main flex-1 w-full min-h-screen bg-gray-200 overflow-hidden z-10">
+<div class="shadow-lg md:shadow p-3 md:p-5 flex ">
+     <!-- Mobile hambuger  -->
+    <img src="./assets/hamburger.png" alt="" class="w-5  md:hidden">
+    <h2 class="text-[20px] md:text-[30px] ml-5 font-bold ">Dashboard</h2> 
+</div>
+
 <div class="container mx-auto p-4   ">
 
 
