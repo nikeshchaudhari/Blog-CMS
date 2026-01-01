@@ -45,7 +45,7 @@ include("config.php");
                 }else{
                     echo " username and password inscorrect";
                 };
-        }
+        } 
             ?>
         </div>
     </main>
