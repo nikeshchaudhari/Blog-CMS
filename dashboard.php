@@ -41,6 +41,8 @@ if(!isset($_SESSION['user'])){
         <a href="logout.php" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Logout</a>
     </div>
 <!-- mobile slider -->
+ <div id="overlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden md:hidden"></div>
+
 <div class="mobile-slider z-20 fixed bg-white w-64 h-full top-0 ">
 <h2 class="p-3 shadow-lg font-bold text-center">Welcome <?php echo $_SESSION['user']?></h2>
 <div class="flex flex-col  ">
@@ -55,7 +57,7 @@ if(!isset($_SESSION['user'])){
 <div class="main flex-1 w-full min-h-screen bg-gray-200 overflow-hidden z-10">
 <div class="shadow-lg md:shadow p-3 md:p-5 flex ">
      <!-- Mobile hambuger  -->
-    <img src="./assets/hamburger.png" alt="" class="w-5  md:hidden">
+    <img src="./assets/hamburger.png" alt="hamburger" id="hamburger" class="w-5  md:hidden">
     <h2 class="text-[20px] md:text-[30px] ml-5 font-bold ">Dashboard</h2> 
 </div>
 
