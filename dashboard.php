@@ -21,38 +21,42 @@ if(!isset($_SESSION['user'])){
 </head>
 
 <body>
-    <div class="flex">
+    <div class="flex  min-h-screen">
    <!-- sidebar -->
-    <div class="sidebar shadow-lg w-[250px] flex-shrink-0  h-screen flex flex-col bg-green-100/10 ">
+    <div class="sidebar shadow-lg w-[250px] flex-shrink-0  h-screen md:flex flex-col bg-green-100/10 hidden md:block  ">
         <h2 class="text-[20px] text-center font-bold mt-3 mb-2 ">Welcome <?php echo $_SESSION['user'] ?></h2>
-        <a href="dashboard.php"- class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Dashboard</a>
-        <a href="#" class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Posts</a>
-        <a href="#" class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Users</a>
-         <a href="#" class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Setting</a>
-        <a href="logout.php" class=" transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Logout</a>
+        <a href="dashboard.php" class="menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2 
+      
+        
+        ">Dashboard</a>
+        <a href="#" class="menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Posts</a>
+        <a href="#" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Users</a>
+         <a href="#" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Setting</a>
+        <a href="logout.php" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Logout</a>
     </div>
-<div class="main w-full bg-gray-200">
-<div class="shadow-lg p-5">
-    <h2 class="text-[30px] ml-5 font-bold">Dashboard</h2> 
+<div class="main flex-1 w-full min-h-screen bg-gray-200 overflow-hidden">
+<div class="shadow-lg md:shadow p-3 md:p-5">
+    <h2 class="text-[20px] md:text-[30px] ml-5 font-bold">Dashboard</h2> 
 </div>
 <div class="flex ">
-    <div class="w-[200px] h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:transform-transformY-3">
-        <h1 class="text-center text-[25px] font-bold">Admin</h1>
+    <div class="w-[200px] md:w-[500px] lg:w-[250px] h-[90px] md:h-[100px] lg:h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer ">
+        <h1 class="text-center text-[20px] lg:text-[25px]  font-bold">Admin</h1>
         
     </div>
-     <div class="w-[200px] h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg">
+     <div class="w-[200px] md:w-[500px] lg:w-[250px] h-[90px] md:h-[150px] lg:h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer">
         <h1 class="text-center text-[25px] font-bold">Users</h1>
     </div>
-    <div class="w-[200px] h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg">
+    <div class="w-[200px] md:w-[300px] lg:w-[250px] h-[90px] md:h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer">
         <h1 class="text-center text-[25px] font-bold"   >Total Posts</h1>
     </div>
    
-    <div class="w-[200px] h-[150px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg">
+    <div class="w-[200px] md:w-[300px] lg:w-[250px] h-[90px] md:h-[150px]  bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer">
         <h1 class="text-center text-[25px] font-bold">Total Comments</h1>
     </div>
 </div>
 </div>
 </div>
+<script src="script.js"></script>
 </body>
 
 </html>
