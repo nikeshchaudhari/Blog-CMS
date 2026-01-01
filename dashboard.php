@@ -43,7 +43,7 @@ if(!isset($_SESSION['user'])){
 <!-- mobile slider -->
  <div id="overlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden md:hidden"></div>
 
-<div class="mobile-slider z-20 fixed bg-white w-64 h-full top-0 ">
+<div class="mobile-slider z-20 fixed bg-white w-64 h-full top-0 left-[-250px] ">
 <h2 class="p-3 shadow-lg font-bold text-center">Welcome <?php echo $_SESSION['user']?></h2>
 <div class="flex flex-col  ">
     <a href="dashboard.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700  active:text-white  ">Dashboard</a>
