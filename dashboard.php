@@ -44,7 +44,10 @@ if(!isset($_SESSION['user'])){
  <div id="overlay" class="fixed inset-0 bg-black opacity-50 z-40 md:hidden"></div>
 
 <div class="mobile-slider z-20 fixed bg-white w-64 h-full top-0 -left-64 ">
-<h2 class="p-3 shadow-lg font-bold text-center">Welcome <?php echo $_SESSION['user']?></h2>
+<div>
+    <h2 class="p-3 shadow-lg font-bold text-center">Welcome <?php echo $_SESSION['user']?></h2>
+    <img src="" alt="">
+</div>
 <div class="flex flex-col  ">
     <a href="dashboard.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700  active:text-white  ">Dashboard</a>
 <a href="dashboard.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700 active:text-white  ">Posts</a>
