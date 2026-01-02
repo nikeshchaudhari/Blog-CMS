@@ -21,3 +21,4 @@ hamburger.addEventListener("click",()=>{
     slider.classList.add("left-0")
     overlay.classList.remove("-left-64")
 })
+
