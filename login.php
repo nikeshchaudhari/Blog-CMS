@@ -43,7 +43,7 @@ include("config.php");
 
                     // role redirect
 
-                   $route = ($user['role']=='admin')? 'dashboard.php ':'index.php';
+                   $route = ($result['role']=='admin')? 'dashboard.php ':'index.php';
                    header("Location: $route");
                    exit();
 
