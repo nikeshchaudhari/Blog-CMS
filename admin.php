@@ -14,7 +14,7 @@ if($result){
 
 // insert query
 
-$query = "INSERT INTO users(username,password,role)VALUES('$username,'$hash,'admin')";
+$query = "INSERT INTO users(username,password,role)VALUES('$username','$hash','admin')";
 $admin_data = mysqli_query($conn,$query);
 if($admin_data){
     ?>
