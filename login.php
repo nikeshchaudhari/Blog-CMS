@@ -39,9 +39,15 @@ include("config.php");
                      
                 if($result && password_verify($password,$result['password'])){
                     $_SESSION['user']=$username;
+                    $_SESSION['role']=$result['role'];
 
-                    header('Location:dashboard.php');
-                    exit();
+                    // role redirect
+
+                   $route = ($user['role']=='admin')? 'dashboard.php ':'index.php';
+                   header("Location: $route");
+                   exit();
+
+                  
                 }else{
                     echo " username and password inscorrect";
                 };
