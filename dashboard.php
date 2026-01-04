@@ -4,8 +4,13 @@ if(!isset($_SESSION['user'])){
     header("Location: login.php");
     exit();
 }
+include "config.php";
 
+$query = "SELECT COUNT(*)AS total_admin FROM users WHERE username ='admin'";
+$data = mysqli_query($conn,$query);
+$result = mysqli_fetch_assoc($data);
 
+echo $result['total_admin'];
 ?>
 
 <!DOCTYPE html>
@@ -68,8 +73,9 @@ if(!isset($_SESSION['user'])){
 
 
 <div class="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-4 ">
-    <div class="h-[100px] md:h-[120px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer ">
+    <div class="h-[100px] md:h-[120px] bg-white shadow-xl flex flex-col items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer ">
         <h1 class="text-center text-[20px] lg:text-[25px]  font-bold">Admin</h1>
+        <h1 class="text-center text-[20px] lg:text-[25px]  font-bold"> <?php echo $result['total_admin'] ?></h1>
         
     </div>
      <div class="h-[100px] md:h-[120px] bg-white shadow-xl flex items-center justify-center m-5 rounded-lg transform transition hover:scale-105 hover:duration-700 cursor-pointer">
