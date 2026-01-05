@@ -60,14 +60,20 @@ session_start();
 
 <div class="container mx-auto p-4   ">
 <div class="p-4  w-full shadow-lg ">
-    <h2 class="my-2">Post Title</h2>
+  <form>
+      <h2 class="my-2">Post Title</h2>
     <input type="text" placeholder="Enter blog title" name="post_title" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
      <h2 class="my-2">Category</h2>
-    <input type="text" placeholder="Enter Category  " name="post_title" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
+    <input type="text" placeholder="Enter Category      " name="post_title" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
      <h2 class="my-2">Post Content</h2>
      <textarea name="area" id="" placeholder="Write your blog content" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none h-45"></textarea>
      <h2 class="my-2">Upload Image</h2>
      <input type="file" name="upload_image" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none cursor-pointer">
+     <div class="flex gap-5 py-4 px-2">
+        <button class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Publish</button>
+        <button class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Draft</button>
+     </div>
+  </form>
 </div>
 
 </div>
