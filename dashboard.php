@@ -10,7 +10,7 @@ $query = "SELECT COUNT(*)AS total_admin FROM users WHERE username ='admin'";
 $data = mysqli_query($conn,$query);
 $result = mysqli_fetch_assoc($data);
 
-echo $result['total_admin'];
+// echo $result['total_admin'];
 ?>
 
 <!DOCTYPE html>
