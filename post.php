@@ -1,5 +1,9 @@
 <?php
 session_start();
+include "config.php";
+
+if(issets($_POST['']))
+$query = "INSERT INTO posts(title,category,content,status)VALUES()"
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +64,7 @@ session_start();
 
 <div class="container mx-auto p-4   ">
 <div class="p-4  w-full shadow-lg ">
-  <form>
+  <form method="post">
       <h2 class="my-2">Post Title</h2>
     <input type="text" placeholder="Enter blog title" name="post_title" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
      <h2 class="my-2">Category</h2>
@@ -70,8 +74,8 @@ session_start();
      <h2 class="my-2">Upload Image</h2>
      <input type="file" name="upload_image" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none cursor-pointer">
      <div class="flex gap-5 py-4 px-2">
-        <button class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Published</button>
-        <button class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Draft</button>
+        <button name="btn_publish" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Published</button>
+        <button name="draft" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Draft</button>
      </div>
   </form>
 </div>
@@ -82,6 +86,7 @@ session_start();
 <script src="script.js">
 
 </script>
+
 </body>
 
 </html>
