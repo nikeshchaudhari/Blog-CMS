@@ -70,7 +70,7 @@ session_start();
      <h2 class="my-2">Upload Image</h2>
      <input type="file" name="upload_image" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none cursor-pointer">
      <div class="flex gap-5 py-4 px-2">
-        <button class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Publish</button>
+        <button class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Published</button>
         <button class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Draft</button>
      </div>
   </form>
