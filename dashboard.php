@@ -19,7 +19,7 @@ $result = mysqli_fetch_assoc($data);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Blog || Admin Dashboard</title>
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
@@ -40,7 +40,7 @@ $result = mysqli_fetch_assoc($data);
       
         
         ">Dashboard</a>
-        <a href="#" class="menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Posts</a>
+        <a href="post.php" class="menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Posts</a>
         <a href="#" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Users</a>
          <a href="#" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Setting</a>
         <a href="logout.php" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Logout</a>
@@ -55,7 +55,7 @@ $result = mysqli_fetch_assoc($data);
 </div>
 <div class="flex flex-col  ">
     <a href="dashboard.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700  active:text-white  ">Dashboard</a>
-<a href="dashboard.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700 active:text-white  ">Posts</a>
+<a href="post.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700 active:text-white  ">Posts</a>
 <a href="dashboard.php" class="px-10 py-2  transform transition duration-300  active:bg-gray-700  active:text-white   ">Users</a>
 <a href="dashboard.php" class="px-10 py-2  transform transition duration-300  active:bg-gray-700  active:text-white   ">Settings</a>
 <a href="dashboard.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700  active:text-white  ">Logout</a>
