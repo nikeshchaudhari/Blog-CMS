@@ -37,12 +37,12 @@ session_start();
 <!-- mobile slider -->
  <div id="overlay" class="fixed inset-0 bg-black opacity-50 z-40 hidden md:hidden"></div>
 
-<div class="mobile-slider z-20 fixed bg-white w-64 h-full top-0 -left-64 ">
+<div class="mobile-slider z-20 fixed bg-white w-64 h-screen top-0 -left-64 ">
 <div>
     <h2 class="p-3 shadow-lg font-bold text-center">Welcome <?php echo $_SESSION['user']?></h2>
     <img src="" alt="">
 </div>
-<div class="flex flex-col  ">
+<div class="flex flex-col   ">
     <a href="dashboard.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700  active:text-white  ">Dashboard</a>
 <a href="post.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700 active:text-white  ">Posts</a>
 <a href="dashboard.php" class="px-10 py-2  transform transition duration-300  active:bg-gray-700  active:text-white   ">Users</a>
@@ -55,11 +55,20 @@ session_start();
 <div class="shadow-lg md:shadow p-3 md:p-5 flex ">
      <!-- Mobile hambuger  -->
     <img src="./assets/hamburger.png" alt="hamburger" id="hamburger" class="w-5  md:hidden">
-    <h2 class="text-[20px] md:text-[30px] ml-5 font-bold ">Dashboard</h2> 
+    <h2 class="text-[20px] md:text-[30px] ml-5 font-bold ">Add Blog </h2> 
 </div>
 
 <div class="container mx-auto p-4   ">
-
+<div class="p-4  w-full shadow-lg ">
+    <h2 class="my-2">Post Title</h2>
+    <input type="text" placeholder="Enter blog title" name="post_title" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
+     <h2 class="my-2">Category</h2>
+    <input type="text" placeholder="Enter blog title" name="post_title" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
+     <h2 class="my-2">Post Content</h2>
+     <textarea name="area" id="" placeholder="Write your blog content" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none h-45"></textarea>
+     <h2 class="my-2">Upload Image</h2>
+     <input type="file" name="upload_image" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none cursor-pointer">
+</div>
 
 </div>
 </div>
