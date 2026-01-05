@@ -63,7 +63,7 @@ session_start();
     <h2 class="my-2">Post Title</h2>
     <input type="text" placeholder="Enter blog title" name="post_title" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
      <h2 class="my-2">Category</h2>
-    <input type="text" placeholder="Enter blog title" name="post_title" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
+    <input type="text" placeholder="Enter Category" name="post_title" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
      <h2 class="my-2">Post Content</h2>
      <textarea name="area" id="" placeholder="Write your blog content" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none h-45"></textarea>
      <h2 class="my-2">Upload Image</h2>
