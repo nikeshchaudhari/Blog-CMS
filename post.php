@@ -55,7 +55,7 @@ session_start();
 <div class="shadow-lg md:shadow p-3 md:p-5 flex ">
      <!-- Mobile hambuger  -->
     <img src="./assets/hamburger.png" alt="hamburger" id="hamburger" class="w-5  md:hidden">
-    <h2 class="text-[20px] md:text-[30px] ml-5 font-bold ">Add Blog </h2> 
+    <h2 class="text-[20px] md:text-[30px] ml-5 font-bold ">Post </h2> 
 </div>
 
 <div class="container mx-auto p-4   ">
