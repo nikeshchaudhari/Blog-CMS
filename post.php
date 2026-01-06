@@ -9,8 +9,18 @@ if(isset($_POST['action'])){
     $status = $_POST['action'];
 //    upload file
 
-if(isset($_FILES['action'])){
-    print_r
+if(isset($_FILES['image'])){
+    echo "<pre>";
+    print_r($_FILES);
+        echo "</pre>";
+
+
+        $file_name = $_FILES["image"]['name'];
+        $file_tmp = $_FILES["image"]['tmp_name'];
+        $file_type = $_FILES["image"]['type'];
+        $file_size = $_FILES["image"]['size'];
+
+        move_uploaded_file($file_tmp,"upload/".$file_name);
 }
     
 
