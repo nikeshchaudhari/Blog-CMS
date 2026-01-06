@@ -74,8 +74,8 @@ echo $result;
     <h2 class="text-[20px] md:text-[30px] ml-5 font-bold ">Post </h2> 
 </div>
 
-<div class="container mx-auto p-4   ">
-<div class="p-4  w-full shadow-lg ">
+<div class="container mx-auto p-4 bg-white   ">
+<div class="p-4  w-full   ">
   <form method="post" enctype="multipart/form-data">
       <h2 class="my-2">Post Title</h2>
     <input type="text" placeholder="Enter blog title" name="post_title" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
