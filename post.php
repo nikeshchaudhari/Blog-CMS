@@ -39,7 +39,7 @@ echo $result;
 <body>
     <div class="flex  min-h-screen">
    <!-- sidebar -->
-    <div class="sidebar shadow-lg w-[250px] flex-shrink-0  h-screen md:flex flex-col bg-green-100/10 hidden md:block  ">
+    <div class="sidebar shadow-lg w-[250px] flex-shrink-0  h-full md:flex flex-col bg-green-100/10 hidden md:block  ">
         <h2 class="text-[20px] text-center font-bold mt-3 mb-2 ">Welcome <?php echo $_SESSION['user'] ?></h2>
         <a href="dashboard.php" class="menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2 
       
