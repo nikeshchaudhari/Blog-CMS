@@ -5,14 +5,14 @@ include "config.php";
 if(isset($_POST['action'])){
     $title = $_POST['post_title'];
     $category = $_POST['category'];
-    $textArea = $_POST['area'];
+    $textArea =  mysqli_real_escape_string ($conn,$_POST['area']);
     $status = $_POST['action'];
 //    upload file
  $image_path ="";
 if(isset($_FILES['image']) && $_FILES["image"]['name'] != ""){
-    echo "<pre>";
-    print_r($_FILES);
-        echo "</pre>";
+    // echo "<pre>";
+    // print_r($_FILES);
+    //     echo "</pre>";
 
 
         $file_name = $_FILES["image"]['name'];
