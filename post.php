@@ -8,8 +8,8 @@ if(isset($_POST['action'])){
     $textArea = $_POST['area'];
     $status = $_POST['action'];
 //    upload file
-
-if(isset($_FILES['image'])){
+ $image_path ="";
+if(isset($_FILES['image']) && $_FILES["image"]['name'] != ""){
     echo "<pre>";
     print_r($_FILES);
         echo "</pre>";
@@ -19,12 +19,15 @@ if(isset($_FILES['image'])){
         $file_tmp = $_FILES["image"]['tmp_name'];
         $file_type = $_FILES["image"]['type'];
         $file_size = $_FILES["image"]['size'];
-
+        
+        // path
+        $image_path = $file_name;
         move_uploaded_file($file_tmp,"upload/".$file_name);
+
 }
     
 
-    $query = "INSERT INTO posts(title,category,content,status)VALUES('$title','$category','$textArea','$status')";
+    $query = "INSERT INTO posts(title,category,content,status,image)VALUES('$title','$category','$textArea','$status','$image_path')";
 $data = mysqli_query($conn,$query);
 
 $result = $data?"save sucessfully":"notsave sucessfully";
