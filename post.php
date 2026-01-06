@@ -7,6 +7,12 @@ if(isset($_POST['action'])){
     $category = $_POST['category'];
     $textArea = $_POST['area'];
     $status = $_POST['action'];
+//    upload file
+
+if(isset($_FILES['action'])){
+    print_r
+}
+    
 
     $query = "INSERT INTO posts(title,category,content,status)VALUES('$title','$category','$textArea','$status')";
 $data = mysqli_query($conn,$query);
@@ -84,7 +90,7 @@ echo $result;
      <h2 class="my-2">Post Content</h2>
      <textarea name="area" id="" placeholder="Write your blog content" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none h-45"></textarea>
      <h2 class="my-2">Upload Image</h2>
-     <input type="file" name="upload_image" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none cursor-pointer">
+     <input type="file" name="image" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none cursor-pointer">
      <div class="flex gap-5 py-4 px-2">
         <button type="submit" value="Published" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Published</button>
         <button type="submit" value="Draft" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Draft</button>
