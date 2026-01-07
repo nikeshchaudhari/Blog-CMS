@@ -20,7 +20,7 @@ if(isset($_POST["register-btn"])){
 
     $query="INSERT INTO user(fullname,email,password)VALUES('$fullName','$email','$hash')";
 $data = mysqli_query($conn,$query);
-echo "Register successful";
+// echo "Register successful";
 
 }
 ?>
