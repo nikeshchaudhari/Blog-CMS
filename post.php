@@ -5,7 +5,7 @@ include "config.php";
 if(isset($_POST['action'])){
     $title = $_POST['post_title'];
     $category = $_POST['category'];
-    $textArea =  mysqli_real_escape_string ($conn,$_POST['area']);
+    $textArea = mysqli_real_escape_string ($conn,$_POST['area']);
     $status = $_POST['action'];
 //    upload file
  $image_path ="";
