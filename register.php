@@ -18,7 +18,7 @@ if(isset($_POST["register-btn"])){
         exit;
     }
 
-    $query="INSERT INTO user(fullname,email,password,role)VALUES('$fullName','$email','$hash',user')";
+    $query="INSERT INTO user(fullname,email,password)VALUES('$fullName','$email','$hash')";
 $data = mysqli_query($conn,$query);
 echo "Register successful";
 
@@ -41,7 +41,7 @@ echo "Register successful";
             <form method="post" class="flex flex-col m-2">
                 <label for="username" class="mb-2">FullName</label>
                 <input type="text" id="username" name="full_name" placeholder="Enter FullName" class="border p-2 rounded mb-2 ">
-                
+        
                 <label for="email" class="mb-2">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter Email" class="border p-2 rounded mb-4">
                  <label for="password" class="mb-2">Password</label>
