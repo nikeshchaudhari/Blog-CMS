@@ -52,12 +52,12 @@ $data = mysqli_query($conn,$query);
                 <div  class="flex flex-col relative">
                      <label for="password" class="mb-2">Password</label>
                 <input type="password" id="password" name="password" placeholder="Create New Password" class="border p-2 rounded mb-2 ">
-                <i class="fa-regular fa-eye absolute right-3 top-11 cursor-pointer" onclick="password"></i>     
+                <i class="fa-regular fa-eye absolute right-3 top-11 cursor-pointer" onclick="toogle('password',this)"></i>     
                 </div>
                  <div  class="flex flex-col relative">
                       <label for="conpassword" class="mb-2">Confirm Password</label>
                 <input type="password" id="conpassword" name="confirmpassword" placeholder="Confirm Password" class="border p-2 rounded mb-4">
-<i class="fa-regular fa-eye absolute right-3 top-11 cursor-pointer"  onclick="conpassword"></i>                 </div>
+<i class="fa-regular fa-eye absolute right-3 top-11 cursor-pointer"  onclick="toogle('conpassword',this)"></i>                 </div>
                 <button type="submit" name="register-btn" class="bg-gray-800 p-2 text-white rounded-lg hover:bg-gray-700 cursor-pointer">Register</button>
             </form>
           
