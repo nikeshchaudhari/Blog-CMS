@@ -1,4 +1,29 @@
-<?php ?>
+<?php 
+include "config.php";
+if(isset($_POST["register-btn"])){
+    $fullName = $_POST["full_name"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $confirmPassword = $_POST["confirmpassword"];
+    $hash = password_hash($password,PASSWORD_DEFAULT);
+
+    // check empty
+    if($fullName==""||$email==""||$password==""||$confirmPassword==""){
+        echo "All fields are required";
+        exit;
+    }
+    // check match
+    if($password !== $confirmPassword){
+        echo "password doesnot match";
+        exit;
+    }
+
+    $query="INSERT INTO user(fullname,email,password,role)VALUES('$fullName','$email','$hash',user')";
+$data = mysqli_query($conn,$query);
+echo "Register successful";
+
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -22,12 +47,10 @@
                  <label for="password" class="mb-2">Password</label>
                 <input type="password" id="password" name="password" placeholder="Create New Password" class="border p-2 rounded mb-2 ">
                    <label for="password" class="mb-2">Confirm Password</label>
-                <input type="password" id="password" name="password" placeholder="Confirm Password" class="border p-2 rounded mb-2">
-                <button type="submit" name="login-btn" class="bg-gray-800 p-2 text-white rounded-lg hover:bg-gray-700 cursor-pointer">Register</button>
+                <input type="password" id="password" name="confirmpassword" placeholder="Confirm Password" class="border p-2 rounded mb-4">
+                <button type="submit" name="register-btn" class="bg-gray-800 p-2 text-white rounded-lg hover:bg-gray-700 cursor-pointer">Register</button>
             </form>
-            <?php 
-           
-            ?>
+          
         </div>
     </main>
 </body>
