@@ -1,6 +1,35 @@
 <?php
 session_start();
 include "config.php";   
+// login
+
+if(isset($_POST['login-btn'])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $query ="SELECT * FROM user WHERE email='$email'";
+    $data = mysqli_query($conn,$query);
+    $result= mysqli_fetch_assoc($data);
+
+    if($result && password_verify($password, $result['password'])){
+        // Session set
+        $_SESSION['email'] = $result['email'];
+        $_SESSION['role'] = $result['role'];
+
+        // Role check
+        if($_SESSION['role'] === 'admin'){
+            header("Location: dashboard.php");
+            exit();
+        } elseif($_SESSION['role'] === 'user'){
+            header("Location: index.php");
+            exit();
+        } else {
+            echo "Unknown role!";
+        }
+    } else {
+        echo "Invalid email or password!";
+    }
+}
 
 ?>
 <!DOCTYPE html>
@@ -28,23 +57,7 @@ include "config.php";
                 <span class="text-center">Don't have an account? <a href="register.php" class="text-blue-600">Register</a></span>
             </form>
             <?php 
-// login
 
-if(isset($_POST['login-btn'])){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-
-    $query ="SELECT * FROM user WHERE email='$email'";
-    $data = mysqli_query($conn,$query);
-  $result= mysqli_fetch_assoc($data);
-//   echo "<pre>";
-//   print_r($result);
-//   echo "</pre>";
-
-if($result && password_verify($password,$result["password"])){
-    $_SESSION['email']= $result["email"];
-}
-}
 
             ?>
         </div>
