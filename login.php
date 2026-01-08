@@ -15,7 +15,7 @@ include("config.php");
 
 <body>
     <main class="w-full h-screen flex justify-center bg-gray-200/100">
-        <div class="w-[400px] h-[280px] m-auto bg-white/20  shadow-xl p-2 rounded">
+        <div class="w-[400px] h-[320px] m-auto bg-white/20  shadow-xl p-2 rounded">
             <h2 class="text-center text-[25px] font-bold">Login</h2>
             <form method="post" class="flex flex-col m-2">
                 <label for="email" class="mb-2">Email</label>
@@ -23,7 +23,8 @@ include("config.php");
                 
                 <label for="pass" class="mb-2">Password</label>
                 <input type="password" id="pass" name="password" placeholder="Enter password" class="border p-2 rounded mb-4">
-                <button type="submit" name="login-btn" class="bg-gray-800 p-2 text-white rounded-lg hover:bg-gray-700 cursor-pointer">Login</button>
+                <button type="submit" name="login-btn" class="bg-gray-800 p-2 text-white rounded-lg hover:bg-gray-700 cursor-pointer mb-2">Login</button>
+                <span class="text-center">Don't have an account? <a href="register.php" class="text-blue-600">Register</a></span>
             </form>
             <?php 
             if(isset($_POST["login-btn"])){
