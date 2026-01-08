@@ -8,7 +8,7 @@ include("config.php");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Blog || Login</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
@@ -27,18 +27,9 @@ include("config.php");
                 <span class="text-center">Don't have an account? <a href="register.php" class="text-blue-600">Register</a></span>
             </form>
             <?php 
-            if(isset($_POST["login-btn"])){
-               $email = $_POST["email"];
-               $password =$_POST["password"];
+        //    login
 
-                
 
-                $query = "SELECT * FROM user WHERE email ='$email'";
-                $data = mysqli_query($conn, $query);    
-
-                $result = mysqli_fetch_assoc($data);
-               
-        } 
             ?>
         </div>
     </main>
