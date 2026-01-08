@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_SESSION['user'])){
+if(!isset($_SESSION['email'])){
     header("Location: login.php");
     exit();
 }
@@ -35,7 +35,7 @@ $result = mysqli_fetch_assoc($data);
     <div class="flex  min-h-screen">
    <!-- sidebar -->
     <div class="sidebar shadow-lg w-[250px] flex-shrink-0  h-screen md:flex flex-col bg-green-100/10 hidden md:block  ">
-        <h2 class="text-[20px] text-center font-bold mt-3 mb-2 ">Welcome <?php echo $_SESSION['user'] ?></h2>
+        <h2 class="text-[20px] text-center font-bold mt-3 mb-2 ">Welcome <?php echo $_SESSION['fullname'] ?></h2>
         <a href="dashboard.php" class="menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2 
       
         
@@ -50,7 +50,7 @@ $result = mysqli_fetch_assoc($data);
 
 <div class="mobile-slider z-20 fixed bg-white w-64 h-full top-0 -left-64 ">
 <div>
-    <h2 class="p-3 shadow-lg font-bold text-center">Welcome <?php echo $_SESSION['user']?></h2>
+    <h2 class="p-3 shadow-lg font-bold text-center">Welcome <?php echo $_SESSION['role']?></h2>
     <img src="" alt="">
 </div>
 <div class="flex flex-col  ">
