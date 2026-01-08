@@ -15,6 +15,7 @@ if(isset($_POST['login-btn'])){
         // Session set
         $_SESSION['email'] = $result['email'];
         $_SESSION['role'] = $result['role'];
+        $_SESSION['fullname']=$result['fullname'];
 
         // Role check
         if($_SESSION['role'] === 'admin'){
