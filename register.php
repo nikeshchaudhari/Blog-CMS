@@ -58,7 +58,7 @@ $data = mysqli_query($conn,$query);
                       <label for="conpassword" class="mb-2">Confirm Password</label>
                 <input type="password" id="conpassword" name="confirmpassword" placeholder="Confirm Password" class="border p-2 rounded mb-4">
 <i class="fa-regular fa-eye absolute right-3 top-11 cursor-pointer"  onclick="toogle('conpassword',this)"></i>                 </div>
-                <button type="submit" name="register-btn" class="bg-gray-800 p-2 text-white rounded-lg hover:bg-gray-700 cursor-pointer mb-4">Register</button>
+                <button type="submit" name="register-btn" class="bg-gray-800 p-2 text-white rounded-lg hover:bg-gray-700 cursor-pointer mb-2">Register</button>
                 <span class="text-center">Already have an account? <a href="login.php" class="text-blue-600">Login</a> </span>
             </form>
           
