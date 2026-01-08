@@ -47,7 +47,7 @@ $data = mysqli_query($conn,$query);
         
               <div  class="flex flex-col">
                   <label for="email" class="mb-2">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter Email" class="border p-2 rounded mb-4">
+                <input type="email" id="email" name="email" placeholder="Enter Email" class="border p-2 rounded mb-2">
               </div>
                 <div  class="flex flex-col relative">
                      <label for="password" class="mb-2">Password</label>
