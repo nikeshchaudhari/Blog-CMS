@@ -1,6 +1,7 @@
 <?php
 session_start();
-include("config.php");
+include "config.php";   
+
 ?>
 <!DOCTYPE html>
 <html lang="en">    
@@ -19,7 +20,7 @@ include("config.php");
             <h2 class="text-center text-[25px] font-bold">Login</h2>
             <form method="post" class="flex flex-col m-2">
                 <label for="email" class="mb-2">Email</label>
-                <input type="text" id="email" name="username" placeholder="Enter email" class="border p-2 rounded mb-2 ">
+                <input type="text" id="email" name="email" placeholder="Enter email" class="border p-2 rounded mb-2 ">
                 
                 <label for="pass" class="mb-2">Password</label>
                 <input type="password" id="pass" name="password" placeholder="Enter password" class="border p-2 rounded mb-4">
@@ -27,8 +28,23 @@ include("config.php");
                 <span class="text-center">Don't have an account? <a href="register.php" class="text-blue-600">Register</a></span>
             </form>
             <?php 
-        //    login
+// login
 
+if(isset($_POST['login-btn'])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $query ="SELECT * FROM user WHERE email='$email'";
+    $data = mysqli_query($conn,$query);
+  $result= mysqli_fetch_assoc($data);
+//   echo "<pre>";
+//   print_r($result);
+//   echo "</pre>";
+
+if($result && password_verify($password,$result["password"])){
+    $_SESSION['email']= $result["email"];
+}
+}
 
             ?>
         </div>
