@@ -59,7 +59,7 @@ echo $result;
     <div class="flex  min-h-screen">
    <!-- sidebar -->
     <div class="sidebar shadow-lg w-[250px] flex-shrink-0  h-full md:flex flex-col bg-green-100/10 hidden md:block  ">
-        <h2 class="text-[20px] text-center font-bold mt-3 mb-2 ">Welcome <?php echo $_SESSION['user'] ?></h2>
+        <h2 class="text-[20px] text-center font-bold mt-3 mb-2 ">Welcome <?php echo $_SESSION['fullname'] ?></h2>
         <a href="dashboard.php" class="menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2 
       
         
@@ -74,7 +74,7 @@ echo $result;
 
 <div class="mobile-slider z-20 fixed bg-white w-64 h-screen top-0 -left-64 ">
 <div>
-    <h2 class="p-3 shadow-lg font-bold text-center">Welcome <?php echo $_SESSION['user']?></h2>
+    <h2 class="p-3 shadow-lg font-bold text-center">Welcome <?php echo $_SESSION['fullname']?></h2>
     <img src="" alt="">
 </div>
 <div class="flex flex-col   ">
@@ -93,7 +93,7 @@ echo $result;
     <h2 class="text-[20px] md:text-[30px] ml-5 font-bold ">Post </h2> 
 </div>
 
-<div class="container mx-auto p-4 bg-white   ">
+<div class="container mx-auto p-4 bg-white/50   ">
 <div class="p-4  w-full   ">
   <form method="post" enctype="multipart/form-data">
       <h2 class="my-2">Post Title</h2>
