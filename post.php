@@ -2,6 +2,10 @@
 session_start();
 include "config.php";
 
+if(!isset($_SESSION["email"])){
+    header("Location: login.php");
+    exit();
+}
 if(isset($_POST['action'])){
     $title = $_POST['post_title'];
     $category = $_POST['category'];
@@ -65,8 +69,8 @@ echo $result;
         
         ">Dashboard</a>
         <a href="post.php" class="menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Posts</a>
-        <a href="#" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Users</a>
-         <a href="#" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Setting</a>
+        <!-- <a href="#" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Users</a> -->
+         <a href="setting.php" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Setting</a>
         <a href="logout.php" class=" menu-link transform transition duration-500 hover:bg-gray-700 hover:text-white  px-10 py-2 mb-2  ">Logout</a>
     </div>
 <!-- mobile slider -->
@@ -80,9 +84,9 @@ echo $result;
 <div class="flex flex-col   ">
     <a href="dashboard.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700  active:text-white  ">Dashboard</a>
 <a href="post.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700 active:text-white  ">Posts</a>
-<a href="dashboard.php" class="px-10 py-2  transform transition duration-300  active:bg-gray-700  active:text-white   ">Users</a>
-<a href="dashboard.php" class="px-10 py-2  transform transition duration-300  active:bg-gray-700  active:text-white   ">Settings</a>
-<a href="dashboard.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700  active:text-white  ">Logout</a>
+<!-- <a href="dashboard.php" class="px-10 py-2  transform transition duration-300  active:bg-gray-700  active:text-white   ">Users</a> -->
+<a href="setting.php" class="px-10 py-2  transform transition duration-300  active:bg-gray-700  active:text-white   ">Settings</a>
+<a href="logout.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700  active:text-white  ">Logout</a>
 </div>
 </div>
     
