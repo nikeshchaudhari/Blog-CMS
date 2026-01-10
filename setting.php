@@ -1,6 +1,10 @@
 <?php 
 session_start();
 include "config.php";
+if(!isset($_SESSION['email'])){
+    header("Location: login.php");
+    exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
