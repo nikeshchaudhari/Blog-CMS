@@ -76,6 +76,9 @@ include "config.php";
     </h1>
           <h2 class="my-2">Posts Per Page</h2>
    <input type="number" min="1" max="20" value="1" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none mb-3">
+   <input type="checkbox" id="comment" name="comment" value="comment">
+   <label for="comment">Allow Comments
+</label>
      <div class="flex gap-5 py-4 px-2">
         <button type="submit" value="Published" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Published</button>
         <button type="submit" value="Draft" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Draft</button>
