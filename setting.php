@@ -81,7 +81,7 @@ include "config.php";
 </label>
      <div class="flex gap-5 py-4 px-2">
         <button type="submit" value="Published" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Published</button>
-        <button type="submit" value="Draft" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Draft</button>
+        <button type="submit" value="draft" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Draft</button>
      </div>
   </form>
 </div>
