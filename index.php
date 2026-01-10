@@ -19,7 +19,7 @@ include("config.php");
     <header>
         <nav class="bg-[#2E55B8] h-15 flex items-center">
             <div class="flex items-center">
-                <div class="text-[30px] font-bold p-2 text-white font-[Montserrat]">BLOG <i class="fa-solid fa-book-open-reader"></i></div>
+                <div class="text-[30px] font-bold p-2 text-white font-[Montserrat]"><a href="index.php">BLOG <i class="fa-solid fa-book-open-reader"></i></a></div>
                 <div>
                     <ul>
                         <li >
@@ -33,5 +33,10 @@ include("config.php");
             
         </nav>
     </header>
+    <!-- main container -->
+     <main>
+        <h1 class="text-center pt-5  font-[Montserrat] font-bold text-[30px]">ALL BLOG</h1>
+     </main>
+
 </body>
 </html>
