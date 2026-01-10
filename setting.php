@@ -60,7 +60,27 @@ include "config.php";
 
 <div class="container mx-auto p-4 bg-white/50   ">
 <div class="p-4  w-full   ">
- 
+  <form method="post" enctype="multipart/form-data">
+    <h1 class="text-[20px] font-bold">
+        General Settings
+    </h1>
+      <h2 class="my-2">Site Title
+</h2>
+    <input type="text" placeholder="Enter blog title" name="post_title" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
+     <h2 class="my-2">Admin Email</h2>
+    <input type="text" placeholder="Enter Category" name="category" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
+     <h2 class="my-2">Timezone</h2>
+        <input type="text" placeholder="Enter Category" name="category" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none mb-3">
+         <h1 class="text-[20px] font-bold">
+        Blog Settings
+    </h1>
+          <h2 class="my-2">Posts Per Page</h2>
+   <input type="number" min="1" max="20" value="1" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none mb-3">
+     <div class="flex gap-5 py-4 px-2">
+        <button type="submit" value="Published" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Published</button>
+        <button type="submit" value="Draft" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Draft</button>
+     </div>
+  </form>
 </div>
 
 </div>
