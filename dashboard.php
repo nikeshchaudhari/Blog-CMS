@@ -6,7 +6,7 @@ if(!isset($_SESSION['email'])){
 }
 include "config.php";
 
-$query = "SELECT COUNT(*)AS total_admin FROM users WHERE username ='admin'";
+$query = "SELECT COUNT(*)AS total_admin FROM user WHERE role ='admin'";
 $data = mysqli_query($conn,$query);
 $result = mysqli_fetch_assoc($data);
 
