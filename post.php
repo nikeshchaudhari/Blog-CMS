@@ -83,8 +83,10 @@ echo $result;
 </div>
 <div class="flex flex-col   ">
     <a href="dashboard.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700  active:text-white  ">Dashboard</a>
-<a href="post.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700 active:text-white  ">Posts</a>
-<!-- <a href="dashboard.php" class="px-10 py-2  transform transition duration-300  active:bg-gray-700  active:text-white   ">Users</a> -->
+<div>
+    <a href="post.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700 active:text-white  ">Posts</a>
+</div>
+
 <a href="setting.php" class="px-10 py-2  transform transition duration-300  active:bg-gray-700  active:text-white   ">Settings</a>
 <a href="logout.php" class="px-10 py-2  transform transition duration-300 active:bg-gray-700  active:text-white  ">Logout</a>
 </div>
