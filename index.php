@@ -17,15 +17,15 @@ include("config.php");
 </head>
 <body>
     <header>
-        <nav class="bg-[#2E55B8] h-16 flex items-center   ">
+        <nav class="bg-[#0a2569] h-16 flex items-center   ">
             <div class=" w-full flex items-center justify-between">
                 <div class="text-[30px] font-bold p-2 text-white font-[Montserrat]"><a href="index.php">BLOG <i class="fa-solid fa-book-open-reader"></i></a></div>
-                <div class=" mr-50">
+                <div class=" mr-50 hidden md:block">
                     <ul >
                         <li class="flex gap-10" >
                             <a href="index.php" class="relative text-white px-2 after:absolute after:w-0 after:h-[3px] after:left-0 after:bottom-0 after:bg-yellow-400 after:transition-all after:duration-300 hover:after:w-full ">Home</a>
-                            <a href="index.php" class="px-2 text-white font-[Montserrat] relative after:bg-yellow-400 ">About</a>
-                            <a href="index.php" class="px-2 text-white font-[Montserrat]">News</a>
+                            <a href="index.php" class="px-2 text-white font-[Montserrat] relative after:absolute after:bg-yellow-400 after:h-[3px] after:w-0 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full  ">About</a>
+                            <a href="index.php" class="px-2 text-white font-[Montserrat] relative after:absolute after:bg-yellow-400 after:h-[3px] after:w-0 after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full ">News</a>
                             <a href="#">
 
                             </a>
@@ -38,7 +38,8 @@ include("config.php");
     </header>
     <!-- main container -->
      <main>
-        <h1 class="text-center pt-5  font-[Montserrat] font-bold text-[30px]">ALL BLOG</h1>
+        
+  <h1 class="text-center pt-5  font-[Montserrat] font-bold text-[30px]">ALL BLOG</h1>
      </main>
 
 </body>
