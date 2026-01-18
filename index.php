@@ -17,13 +17,13 @@ include("config.php");
 </head>
 <body>
     <header>
-        <nav class="bg-[#2E55B8] h-15 flex items-center">
-            <div class="flex items-center">
+        <nav class="bg-[#2E55B8] h-16 flex items-center   ">
+            <div class=" w-full flex items-center justify-between">
                 <div class="text-[30px] font-bold p-2 text-white font-[Montserrat]"><a href="index.php">BLOG <i class="fa-solid fa-book-open-reader"></i></a></div>
-                <div>
-                    <ul>
-                        <li >
-                            <a href="index.php" class="px-2 text-white font-[Montserrat]">Home</a>
+                <div class=" mr-50">
+                    <ul >
+                        <li class="flex gap-10" >
+                            <a href="index.php" class="px-2 text-white font-[Montserrat] ">Home</a>
                             <a href="index.php" class="px-2 text-white font-[Montserrat] ">About</a>
                             <a href="index.php" class="px-2 text-white font-[Montserrat]">News</a>
                         </li>
