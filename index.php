@@ -23,9 +23,12 @@ include("config.php");
                 <div class=" mr-50">
                     <ul >
                         <li class="flex gap-10" >
-                            <a href="index.php" class="px-2 text-white font-[Montserrat] ">Home</a>
-                            <a href="index.php" class="px-2 text-white font-[Montserrat] ">About</a>
+                            <a href="index.php" class="relative text-white px-2 after:absolute after:w-0 after:h-[3px] after:left-0 after:bottom-0 after:bg-yellow-400 after:transition-all after:duration-300 hover:after:w-full ">Home</a>
+                            <a href="index.php" class="px-2 text-white font-[Montserrat] relative after:bg-yellow-400 ">About</a>
                             <a href="index.php" class="px-2 text-white font-[Montserrat]">News</a>
+                            <a href="#">
+
+                            </a>
                         </li>
                     </ul>
                 </div>
