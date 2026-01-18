@@ -40,7 +40,13 @@ include("config.php");
      <main>
         
   <h1 class="text-center pt-5  font-[Montserrat] font-bold text-[30px]">ALL BLOG</h1>
+
+
+  
      </main>
+
+
+     
 
 </body>
 </html>
