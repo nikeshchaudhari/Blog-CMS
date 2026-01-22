@@ -18,20 +18,24 @@ include "config.php";
 </head>
 <body>
     <header>
-        <nav class="bg-[#1433A3] p-2">
+        <nav class="bg-[#1433A3] p-3 w-full ">
             <div class="flex justify-between items-center">
                 <div>
                     <h1  class="text-[25px] font-[Montserrat] font-bold mx-5 text-white">BLOG <i class="fa-solid fa-book-open-reader"></i></h1>
                     
                 </div>
-                <div>
+                <div class="hidden md:block">
                     <ul class=" flex gap-5 mr-10 items-center">
                         <li><a href="index.php" class="text-white font-[Montserrat]">Home</a></li>
                         <li><a href="#" class="text-white font-[Montserrat]">Blog</a></li>
                         <li><a href="#" class="text-white font-[Montserrat]">About</a></li>
-                        <li><i class="fa-regular fa-circle-user text-white text-[20px] "></i></li>
-
+                        <li><a href="#" class="text-white font-[Montserrat]">
+                            <button class="bg-[#FFFFFF] p-2 rounded-[2px] text-black cursor-pointer  transition-all hover:bg-[#DBDBDB]  duration-700 w-[120px]">Add Blog</button>
+                        </a></li>
+                        <li><i class="fa-regular fa-circle-user text-white text-[25px] "></i></li>
+                        
                     </ul>
+                    
                 </div>
             </div>
         </nav>
