@@ -40,8 +40,12 @@ include "config.php";
           <i class="fa-solid fa-bars"></i>  
     </button>
             </div>
+              <!-- mobile menu -->
         </nav>
     </header>
-    
+  
+
+
+
 </body>
 </html>
