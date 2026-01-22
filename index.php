@@ -25,10 +25,12 @@ include "config.php";
                     
                 </div>
                 <div>
-                    <ul class=" flex gap-5 mr-25">
+                    <ul class=" flex gap-5 mr-10 items-center">
                         <li><a href="index.php" class="text-white font-[Montserrat]">Home</a></li>
                         <li><a href="#" class="text-white font-[Montserrat]">Blog</a></li>
                         <li><a href="#" class="text-white font-[Montserrat]">About</a></li>
+                        <li><i class="fa-regular fa-circle-user text-white text-[20px] "></i></li>
+
                     </ul>
                 </div>
             </div>
