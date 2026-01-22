@@ -19,12 +19,18 @@ include "config.php";
 <body>
     <header>
         <nav class="bg-[#1433A3] p-2">
-            <div>
+            <div class="flex justify-between items-center">
                 <div>
                     <h1  class="text-[25px] font-[Montserrat] font-bold mx-5 text-white">BLOG <i class="fa-solid fa-book-open-reader"></i></h1>
                     
                 </div>
-                <div></div>
+                <div>
+                    <ul class=" flex gap-5 mr-25">
+                        <li><a href="index.php" class="text-white font-[Montserrat]">Home</a></li>
+                        <li><a href="#" class="text-white font-[Montserrat]">Blog</a></li>
+                        <li><a href="#" class="text-white font-[Montserrat]">About</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
