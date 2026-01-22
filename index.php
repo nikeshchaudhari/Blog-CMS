@@ -25,9 +25,9 @@ include "config.php";
               
                 
                     <ul class="hidden md:flex gap-5 mr-10 items-center">
-                        <li><a href="index.php" class="text-white font-[Montserrat]">Home</a></li>
-                        <li><a href="#" class="text-white font-[Montserrat]">Blog</a></li>
-                        <li><a href="#" class="text-white font-[Montserrat]">About</a></li>
+                        <li><a href="index.php" class="text-white font-[Montserrat]  relative after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-[2px] after:bg-[#CCC4C4] after:transition-all hover:after:w-full after:duration-500">Home</a></li>
+                        <li><a href="#" class="text-white font-[Montserrat]  relative after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-[2px] after:bg-[#CCC4C4] after:transition-all hover:after:w-full after:duration-500">Blog</a></li>
+                        <li><a href="#" class="text-white font-[Montserrat]  relative after:absolute after:-bottom-0.5 after:left-0 after:w-0 after:h-[2px] after:bg-[#CCC4C4] after:transition-all hover:after:w-full after:duration-500">About</a></li>
                         <li><a href="#" class="text-white font-[Montserrat]">
                             <button class="bg-[#FFFFFF] p-2 rounded-[2px] text-black cursor-pointer  transition-all hover:bg-[#DBDBDB]  duration-700 w-[120px]">Add Blog</button>
                         </a></li>
