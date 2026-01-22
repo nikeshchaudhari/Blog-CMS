@@ -20,12 +20,11 @@ include "config.php";
     <header>
         <nav class="bg-[#1433A3] p-3 w-full ">
             <div class="flex justify-between items-center">
-                <div>
+               
                     <h1  class="text-[25px] font-[Montserrat] font-bold mx-5 text-white">BLOG <i class="fa-solid fa-book-open-reader"></i></h1>
-                    
-                </div>
-                <div class="hidden md:block">
-                    <ul class=" flex gap-5 mr-10 items-center">
+              
+                
+                    <ul class="hidden md:flex gap-5 mr-10 items-center">
                         <li><a href="index.php" class="text-white font-[Montserrat]">Home</a></li>
                         <li><a href="#" class="text-white font-[Montserrat]">Blog</a></li>
                         <li><a href="#" class="text-white font-[Montserrat]">About</a></li>
@@ -35,8 +34,11 @@ include "config.php";
                         <li><i class="fa-regular fa-circle-user text-white text-[25px] "></i></li>
                         
                     </ul>
-                    
-                </div>
+              
+                <!-- Mobile hamburger -->
+    <button  class="md:hidden text-white text-[25px]">
+          <i class="fa-solid fa-bars"></i>  
+    </button>
             </div>
         </nav>
     </header>
