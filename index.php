@@ -13,13 +13,15 @@ include "config.php";
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="bg-[#1433A3] p-2">
             <div>
                 <div>
-                    <h1>BLOG <i class="fa-solid fa-book-open-reader"></i></h1>
+                    <h1  class="text-[25px] font-[Montserrat] font-bold mx-5 text-white">BLOG <i class="fa-solid fa-book-open-reader"></i></h1>
                     
                 </div>
                 <div></div>
