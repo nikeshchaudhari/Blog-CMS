@@ -47,10 +47,14 @@ include "config.php";
 <!-- section -->
  <main>
 <div>
-<!-- s -->
+<!-- slider -->
 </div> 
  </main>
-
+<div >
+<img src="./assets/1.jpg" alt="" class="slide-active w-full h-[450px] object-cover">
+<img src="./assets/2.jpg" alt="" class="slide w-full h-[450px] object-cover">
+<img src="./assets/3.jpg" alt="" class="slide w-full h-[450px] object-cover">
+</div>
 
 </body>
 </html>
