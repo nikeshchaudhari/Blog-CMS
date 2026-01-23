@@ -43,8 +43,13 @@ include "config.php";
               <!-- mobile menu -->
         </nav>
     </header>
-  
 
+<!-- section -->
+ <main>
+<div>
+<!-- s -->
+</div> 
+ </main>
 
 
 </body>
