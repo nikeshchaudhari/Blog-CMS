@@ -50,10 +50,14 @@ include "config.php";
 <!-- slider -->
 </div> 
  </main>
-<div >
-<img src="./assets/1.jpg" alt="" class="slide-active w-full h-[450px] object-cover">
-<img src="./assets/2.jpg" alt="" class="slide w-full h-[450px] object-cover">
-<img src="./assets/3.jpg" alt="" class="slide w-full h-[450px] object-cover">
+<div class="slider relative overflow:hidden">
+<img src="./assets/1.jpg" alt="" class="slide active w-full h-[450px] object-cover opacity-1">
+<img src="./assets/2.jpg" alt="" class="slide w-full h-[450px] object-cover absolute opacity-0">
+<img src="./assets/3.jpg" alt="" class="slide w-full h-[450px] object-cover absolute opacity-0">
+<img src="./assets/4.jpg" alt="" class="slide w-full h-[450px] object-cover absolute opacity-0">
+
+<button class="prev absolute top-[50%] text-[30px] cursor-pointer"><i class="fa-solid fa-circle-chevron-left"></i></button>
+<button class="next absolute top-[50%] right-0 text-[30px] cursor-pointer"><i class="fa-solid fa-circle-chevron-right"></i></i></button>
 </div>
 
 </body>
