@@ -56,7 +56,7 @@ include "config.php";
 <img src="./assets/3.jpg" alt="" class="slide w-full h-[450px] object-cover absolute opacity-0 top-0 transition-all duration-500">
 <img src="./assets/4.jpg" alt="" class="slide w-full h-[450px] object-cover absolute opacity-0 top-0 transition-all duration-500">
 
-<button class="prev absolute top-[50%] text-[30px] cursor-pointer mx-2"><i class="fa-solid fa-circle-chevron-left"></i></button>
+<button class="prev absolute top-[50%] text-[30px] cursor-pointer mx-2"><i class="fa-solid fa-circle-chevron-left text-white"></i></button>
 <button class="next absolute top-[50%] right-0 text-[30px] cursor-pointer mx-2"><i class="fa-solid fa-circle-chevron-right text-white"></i></i></button>
 </div>
 
@@ -67,7 +67,7 @@ let i = 0 ;
 
 document.querySelector(".next").addEventListener("click",()=>{
     slides[i].classList.remove("opacity-100");
-    // slides[i].classList.add("opacity-0");
+    slides[i].classList.add("opacity-0");
     i =(i+1)%slides.length;
 
     slides[i].classList.remove("opacity-0");
@@ -75,8 +75,8 @@ document.querySelector(".next").addEventListener("click",()=>{
 })
 
 document.querySelector(".prev").addEventListener("click",()=>{
-    slides[i].classList.remove("opacity-0");
-    slides[i].classList.add("opacity-100");
+    slides[i].classList.remove("opacity-100");
+    slides[i].classList.add("opacity-0");
 
     i=(i-1+slides.length)%slides.length;
 
