@@ -50,7 +50,7 @@ include "config.php";
 <!-- slider -->
 </div> 
  </main>
-<div class="slider relative overflow:hidden">
+<div class="slider relative overflow:hidden w-full">
 <img src="./assets/1.jpg" alt="" class="slide active w-full h-[450px] object-cover opacity-100 transition-all duration-500">
 <img src="./assets/2.jpg" alt="" class="slide w-full h-[450px] object-cover absolute opacity-0 top-0 transition-all duration-500">
 <img src="./assets/3.jpg" alt="" class="slide w-full h-[450px] object-cover absolute opacity-0 top-0 transition-all duration-500">
@@ -58,6 +58,8 @@ include "config.php";
 
 <button class="prev absolute top-[50%] text-[30px] cursor-pointer mx-2"><i class="fa-solid fa-circle-chevron-left text-white"></i></button>
 <button class="next absolute top-[50%] right-0 text-[30px] cursor-pointer mx-2"><i class="fa-solid fa-circle-chevron-right text-white"></i></i></button>
+
+<h1 class="absolute text-[30px] text-white bg-black/80 top-[50%] left-[40%]  rounded px-20 py-2 font-bold font-[Montserrat]">All Blogs</h1>
 </div>
 
 <script >
