@@ -17,7 +17,7 @@ include "config.php";
 
 </head>
 <body>
-    <header>
+  
         <nav class="bg-[#1433A3] p-3 w-full ">
             <div class="flex justify-between items-center">
                
@@ -42,7 +42,7 @@ include "config.php";
             </div>
               <!-- mobile menu -->
         </nav>
-    </header>
+    
 
 <!-- section -->
  <main>
@@ -50,42 +50,18 @@ include "config.php";
 <!-- slider -->
 </div> 
  </main>
-<div class="slider relative overflow:hidden w-full">
+<div class="slider relative overflow-hidden w-full ">
 <img src="./assets/1.jpg" alt="" class="slide active w-full h-[450px] object-cover opacity-100 transition-all duration-500">
 <img src="./assets/2.jpg" alt="" class="slide w-full h-[450px] object-cover absolute opacity-0 top-0 transition-all duration-500">
 <img src="./assets/3.jpg" alt="" class="slide w-full h-[450px] object-cover absolute opacity-0 top-0 transition-all duration-500">
 <img src="./assets/4.jpg" alt="" class="slide w-full h-[450px] object-cover absolute opacity-0 top-0 transition-all duration-500">
 
 <button class="prev absolute top-[50%] text-[30px] cursor-pointer mx-2"><i class="fa-solid fa-circle-chevron-left text-white"></i></button>
-<button class="next absolute top-[50%] right-0 text-[30px] cursor-pointer mx-2"><i class="fa-solid fa-circle-chevron-right text-white"></i></i></button>
+<button class="next absolute top-[50%] right-0 text-[30px] cursor-pointer mx-2" ><i class="fa-solid fa-circle-chevron-right text-white"></i></i></button>
 
-<h1 class="absolute text-[30px] text-white bg-black/80 top-[50%] left-[40%]  rounded px-20 py-2 font-bold font-[Montserrat]">All Blogs</h1>
+<h1 class="absolute text-[30px] text-white bg-black/80 top-[50%] left-[40%]  rounded px-20 py-2 font-bold font-[Montserrat] follow-text">All Blogs</h1>
 </div>
+<script src="script.js"></script>
 
-<script >
-
-const slides = document.querySelectorAll(".slide")
-let i = 0 ;
-
-document.querySelector(".next").addEventListener("click",()=>{
-    slides[i].classList.remove("opacity-100");
-    slides[i].classList.add("opacity-0");
-    i =(i+1)%slides.length;
-
-    slides[i].classList.remove("opacity-0");
-    slides[i].classList.add("opacity-100")
-})
-
-document.querySelector(".prev").addEventListener("click",()=>{
-    slides[i].classList.remove("opacity-100");
-    slides[i].classList.add("opacity-0");
-
-    i=(i-1+slides.length)%slides.length;
-
-    slides[i].classList.remove("opacity-0");
-    slides[i].classList.add("opacity-100");
-
-})
-</script>
 </body>
 </html>
