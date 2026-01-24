@@ -28,7 +28,7 @@ hamburger.addEventListener("click",()=>{
 })
 
 
-// form password hide or show
+// form password hide or show Register
 
 function toogle(id,icon){
     const input = document.getElementById(id);
@@ -42,3 +42,36 @@ function toogle(id,icon){
         icon.classList.add("fa-eye")
     }
 }
+
+// Icon Hode or Show Login
+
+// function eyeBtn(id,icon){
+//     const input = document.getElementById(id);
+//     if(input.type==="password")
+
+// }
+
+const slides = document.querySelectorAll(".slide")
+let i = 0 ;
+
+document.querySelector(".next").addEventListener("click",()=>{
+    slides[i].classList.remove("opacity-100");
+    slides[i].classList.add("opacity-0");
+    i =(i+1)%slides.length;
+
+    slides[i].classList.remove("opacity-0");
+    slides[i].classList.add("opacity-100")
+})
+
+document.querySelector(".prev").addEventListener("click",()=>{
+    slides[i].classList.remove("opacity-100");
+    slides[i].classList.add("opacity-0");
+
+    i=(i-1+slides.length)%slides.length;
+
+    slides[i].classList.remove("opacity-0");
+    slides[i].classList.add("opacity-100");
+
+})
+
+
