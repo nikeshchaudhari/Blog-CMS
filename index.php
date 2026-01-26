@@ -61,7 +61,33 @@ include "config.php";
 
 <h1 class="absolute text-[30px] text-white bg-black/80 top-[50%] left-[40%]  rounded px-20 py-2 font-bold font-[Montserrat] follow-text">All Blogs</h1>
 </div>
-<script src="script.js"></script>
+<script >
+
+    // slider
+    const slides = document.querySelectorAll(".slide")
+let i = 0 ;
+
+document.querySelector(".next").addEventListener("click",()=>{
+    slides[i].classList.remove("opacity-100");
+    slides[i].classList.add("opacity-0");
+    i =(i+1)%slides.length;
+
+    slides[i].classList.remove("opacity-0");
+    slides[i].classList.add("opacity-100")
+})
+
+document.querySelector(".prev").addEventListener("click",()=>{
+    slides[i].classList.remove("opacity-100");
+    slides[i].classList.add("opacity-0");
+
+    i=(i-1+slides.length)%slides.length;
+
+    slides[i].classList.remove("opacity-0");
+    slides[i].classList.add("opacity-100");
+
+})
+
+</script>
 
 </body>
 </html>
