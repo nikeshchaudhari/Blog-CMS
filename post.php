@@ -1,43 +1,4 @@
 <?php
-// session_start();
-// include "config.php";
-
-// if(!isset($_SESSION["email"])){
-//     header("Location: login.php");
-//     exit();
-// }
-// if(isset($_POST['action'])){
-//     $title = $_POST['post_title'];
-//     $category = $_POST['category'];
-//     $textArea = mysqli_real_escape_string ($conn,$_POST['area']);
-//     $status = $_POST['action'];
-// //    upload file
-//  $image_path ="";
-// if(isset($_FILES['image']) && $_FILES["image"]['name'] != ""){
-//     // echo "<pre>";
-//     // print_r($_FILES);
-//     //     echo "</pre>";
-
-
-//         $file_name = $_FILES["image"]['name'];
-//         $file_tmp = $_FILES["image"]['tmp_name'];
-//         $file_type = $_FILES["image"]['type'];
-//         $file_size = $_FILES["image"]['size'];
-        
-//         // path
-//         $image_path = $file_name;
-//         move_uploaded_file($file_tmp,"upload/".$file_name);
-
-// }
-    
-
-//     $query = "INSERT INTO posts(title,category,content,status,image)VALUES('$title','$category','$textArea','$status','$image_path')";
-// $data = mysqli_query($conn,$query);
-
-// $result = $data?"save sucessfully":"notsave sucessfully";
-
-// echo $result;
-// }
 
 
 session_start();
@@ -127,26 +88,47 @@ echo $result;
 
 <div class="container mx-auto p-4 bg-white/50   ">
 <div class="p-4  w-full   ">
-  <form method="post" enctype="multipart/form-data">
+  <form method="post" id="postForm"enctype="multipart/form-data">
       <h2 class="my-2">Post Title</h2>
-    <input type="text" placeholder="Enter blog title" name="post_title" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
+    <input type="text" placeholder="Enter blog title" name="post_title" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none" id="post-title">
      <h2 class="my-2">Category</h2>
-    <input type="text" placeholder="Enter Category" name="category" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none">
+    <input type="text" placeholder="Enter Category" name="category" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none" id="category">
      <h2 class="my-2">Post Content</h2>
-     <textarea name="area" id="" placeholder="Write your blog content" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none h-45"></textarea>
+     <textarea name="area" id="area" placeholder="Write your blog content" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none h-45"></textarea>
      <h2 class="my-2">Upload Image</h2>
-     <input type="file" name="image" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none cursor-pointer">
+     <input type="file" name="image" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none cursor-pointer" id="image"   >
      <div class="flex gap-5 py-4 px-2">
         <button type="submit" value="published" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Published</button>
         <button type="submit" value="draft" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Draft</button>
      </div>
   </form>
+  <div id="errorMsg" class="text-red-500 mt-2"></div>
 </div>
 
 </div>
 </div>
 </div>
-<script src="script.js">
+<script >
+
+    document.getElementById("postForm").addEventListener("submit",(e)=>{
+        e.preventDefault();
+        let errorMsg = "";
+
+        const title = document.getElementById("post-title").value.trim();
+
+        if(title === ""){
+        errorMsg += "title is required..<br>";
+    }else if(title.length < 3){
+        errorMsg += "Title must be at least 3 characters.<br>"
+    }
+     if(errorMsg !== ""){
+        document.getElementById("errorMsg").innerHTML= errorMsg;
+    }else{
+        e.target.submit();
+    }
+    })
+
+   
 
 </script>
 
