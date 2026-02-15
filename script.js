@@ -53,3 +53,17 @@ function toogle(id,icon){
 
 
 
+// post form validation
+document.getElementById("postForm").addEventListener("submit",()=>{
+    let errorMsg = "";
+
+    const title = document.getElementById("post-title").value.trim();
+    const category = document.getElementById("category").value.trim();
+    const textArea = document.getElementById("area");
+
+    if(title === ""){
+        errorMsg += "title is required..<br>";
+    }else if(title.length < 3){
+        errorMsg += "Title must be at least 3 characters.<br>"
+    }
+})
