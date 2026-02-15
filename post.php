@@ -39,6 +39,32 @@
 // echo $result;
 // }
 
+
+session_start();
+include "./config.php";
+
+if(!isset($_SESSION['email'])){
+    header("Location:login.php");
+    exit();
+}
+
+if(isset($_POST["action"])){
+
+if($_POST['action']=='published'){
+        // echo "Publish branch";
+} elseif($_POST['action']=='draft'){
+//  echo "Draft branch";
+}
+$title = mysqli_real_escape_string($conn,$_POST['post_title']);
+$category = mysqli_real_escape_string($conn,$_POST['category']);
+$textArea = mysqli_real_escape_string($conn,$_POST['area']);
+$status = $_POST['action'];
+
+$query = "INSERT INTO posts(title,category,content,status)VALUES('$title','$category','$textArea','$status')";
+$data = mysqli_query($conn,$query);
+$result = $data?"save sucessfully":"notsave sucessfully";
+echo $result; 
+}
 ?>
 
 <!DOCTYPE html>
@@ -111,8 +137,8 @@
      <h2 class="my-2">Upload Image</h2>
      <input type="file" name="image" class="border border-gray-500 focus:border-blue-500 rounded-lg  w-full py-3 px-2 outline-none cursor-pointer">
      <div class="flex gap-5 py-4 px-2">
-        <button type="submit" value="Published" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Published</button>
-        <button type="submit" value="Draft" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Draft</button>
+        <button type="submit" value="published" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Published</button>
+        <button type="submit" value="draft" name="action" class="bg-blue-500 py-2 px-6 text-white rounded transation duration-500 hover:bg-blue-600 cursor-pointer">Draft</button>
      </div>
   </form>
 </div>
