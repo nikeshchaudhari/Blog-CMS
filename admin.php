@@ -1,34 +1,18 @@
 <?php 
 include("config.php");
 
-$username = "admin";
-$password = "qwerty";
+$fullName = "nikesh";
+$email = "admin@gmail.com";
+$password = "admin";
+
 
 $hash = password_hash($password,PASSWORD_DEFAULT);
-$check_admin_query = "SELECT id FROM users WHERE username='$username'";
-$data = mysqli_query($conn,$check_admin_query);
-$result = mysqli_fetch_assoc($data);
-if($result){
-    echo "admin already register";
-}
 
-// insert query
+$query = "INSERT INTO user(fullname,email,password,role)VALUES('$fullName','$email','$hash','admin')";
+$data = mysqli_query($conn,$query);
 
-$query = "INSERT INTO users(username,password,role)VALUES('$username','$hash','admin')";
-$admin_data = mysqli_query($conn,$query);
-if($admin_data){
-    ?>
-
-<script>
-    alert("Admin Add Successfully...");
-</script>
-<?php
-}else{
-    ?>
-<script>
-    alert("Admin Not Added ...");
-</script>
-    <?php
+if($data){
+    echo "admin register";
 }
 
 ?>
