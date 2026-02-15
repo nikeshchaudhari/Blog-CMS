@@ -1,43 +1,43 @@
 <?php
-session_start();
-include "config.php";
+// session_start();
+// include "config.php";
 
-if(!isset($_SESSION["email"])){
-    header("Location: login.php");
-    exit();
-}
-if(isset($_POST['action'])){
-    $title = $_POST['post_title'];
-    $category = $_POST['category'];
-    $textArea = mysqli_real_escape_string ($conn,$_POST['area']);
-    $status = $_POST['action'];
-//    upload file
- $image_path ="";
-if(isset($_FILES['image']) && $_FILES["image"]['name'] != ""){
-    // echo "<pre>";
-    // print_r($_FILES);
-    //     echo "</pre>";
+// if(!isset($_SESSION["email"])){
+//     header("Location: login.php");
+//     exit();
+// }
+// if(isset($_POST['action'])){
+//     $title = $_POST['post_title'];
+//     $category = $_POST['category'];
+//     $textArea = mysqli_real_escape_string ($conn,$_POST['area']);
+//     $status = $_POST['action'];
+// //    upload file
+//  $image_path ="";
+// if(isset($_FILES['image']) && $_FILES["image"]['name'] != ""){
+//     // echo "<pre>";
+//     // print_r($_FILES);
+//     //     echo "</pre>";
 
 
-        $file_name = $_FILES["image"]['name'];
-        $file_tmp = $_FILES["image"]['tmp_name'];
-        $file_type = $_FILES["image"]['type'];
-        $file_size = $_FILES["image"]['size'];
+//         $file_name = $_FILES["image"]['name'];
+//         $file_tmp = $_FILES["image"]['tmp_name'];
+//         $file_type = $_FILES["image"]['type'];
+//         $file_size = $_FILES["image"]['size'];
         
-        // path
-        $image_path = $file_name;
-        move_uploaded_file($file_tmp,"upload/".$file_name);
+//         // path
+//         $image_path = $file_name;
+//         move_uploaded_file($file_tmp,"upload/".$file_name);
 
-}
+// }
     
 
-    $query = "INSERT INTO posts(title,category,content,status,image)VALUES('$title','$category','$textArea','$status','$image_path')";
-$data = mysqli_query($conn,$query);
+//     $query = "INSERT INTO posts(title,category,content,status,image)VALUES('$title','$category','$textArea','$status','$image_path')";
+// $data = mysqli_query($conn,$query);
 
-$result = $data?"save sucessfully":"notsave sucessfully";
+// $result = $data?"save sucessfully":"notsave sucessfully";
 
-echo $result;
-}
+// echo $result;
+// }
 
 ?>
 
